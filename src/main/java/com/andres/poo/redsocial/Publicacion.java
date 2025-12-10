@@ -17,7 +17,7 @@ public class Publicacion {
 		numeroLikes += 1;
 	}
 	
-	public void verMeGusta() {
-		System.out.println(numeroLikes);
+	public int verMeGusta() {
+		return numeroLikes;
 	}
 }
