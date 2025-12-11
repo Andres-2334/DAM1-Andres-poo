@@ -1,14 +1,16 @@
 package com.andres.poo.redsocial;
+import java.util.ArrayList;
 
 public class PerfilRedSocial {
-String nombreusuario;
-String nombrevisible;
-String biografia;
-String ciudad;
-int numseguidores;
-int numpublicaciones;
-Estado estadoperfil;
-boolean verificado;
+private String nombreusuario;
+private String nombrevisible;
+private String biografia;
+private String ciudad;
+private int numseguidores;
+private int numpublicaciones;
+private Estado estadoperfil;
+private boolean verificado;
+private ArrayList<Publicacion> listapublicaciones = new ArrayList<>();
 
 public void mostrarinfo() {
 	System.out.println("nombre: " + nombreusuario);
@@ -30,6 +32,13 @@ public void cambiarEstado(Estado cambio) {
 public boolean estaActivo() {
 	return estadoperfil==Estado.ESTADO_ACTIVADO;
 
-}
+}	
 
+public void crearPublicacion() {
+	Publicacion publicacion = new Publicacion();
+	listapublicaciones.add(publicacion);
+}
+public void mostrarPublicacion() {
+	System.out.println(listapublicaciones.iterator());
+}
 }
